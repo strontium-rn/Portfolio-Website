@@ -18,21 +18,25 @@ function Contact() {
     e.preventDefault();
     setStatus('Sending...');
 
-    emailjs
-      .send(
-        'service_sd689gb', //  Service ID 
-        'template_vb05dkr', //  Template ID 
+    // Log the form data to ensure it's being captured correctly
+    console.log('Form Data:', formData);
+
+    emailjs.send(
+        'service_sd689gb', // Service ID 
+        'template_vb05dkr', // Template ID
         formData,
-        'YOUR_PUBLIC_KEYTb3G4TWkhBJI86uzI' // Public Key
+        'Tb3G4TWkhBJI86uzI' // Public Key
       )
       .then(
         (result) => {
+          console.log('EmailJS Success:', result);
           setStatus('Message sent successfully!');
           setFormData({ name: '', email: '', message: '' });
         },
         (error) => {
+          console.error('EmailJS Error:', error);
           setStatus('Failed to send message. Please try again later.');
-          console.error('EmailJS error:', error);
+          document.querySelector('.form-status').classList.add('error');
         }
       );
   };

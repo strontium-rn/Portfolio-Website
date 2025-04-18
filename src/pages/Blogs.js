@@ -1,27 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '../App.css'; 
 
-function Blogs() {
+const blogData = [
+  {
+    id: 1,
+    title: 'Cycling around 7 UNESCO World Heritage Sites in a day',
+    description: 'A cycling journey of 70KM to explore 7 UNESCO world heritage sites, starting from Kirtipur.',
+    date: 'August 23, 2022',
+  },
+  {
+    id: 2,
+    title: 'How becoming a cognitive scientist will make you feel like Harvey Specter',
+    description: 'An unsual talent I noticed in my friend which led to me explore cognitive science deeper',
+    date: 'April 16, 2025',
+  },
+  // Add more blogs here
+];
+
+const Blogs = () => {
   return (
-    <section className="blogs">
-      <h1>My Blogs</h1>
-      <div className="blog-list">
-        <div className="blog">
-          <h3>Exploring the Intersection of AI and Cognitive Science</h3>
-          <p>
-            A deep dive into how AI can learn from human cognition to create more intuitive systems.
-          </p>
-          <a href="#">Read More</a>
-        </div>
-        <div className="blog">
-          <h3>Building My First Chess Engine: Lessons Learned</h3>
-          <p>
-            Sharing my journey of building a chess engine with Python and Pygame, including challenges and solutions.
-          </p>
-          <a href="#">Read More</a>
-        </div>
+    <div className="container">
+      <h2>My Blogs</h2>
+      <div className="blog-grid">
+        {blogData.map((blog) => (
+          <Link to={`/blog/${blog.id}`} className="blog-card" key={blog.id}>
+            <h3>{blog.title}</h3>
+            <p>{blog.description}</p>
+            <div className="date">Published on {blog.date}</div>
+          </Link>
+        ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default Blogs;

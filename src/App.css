@@ -11,10 +11,12 @@ body {
   color: #2d3748;
 }
 
+/* Ensure the root container fits within the viewport */
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Full viewport height */
+  justify-content: space-between; /* Distribute space between header, main content, and footer */
 }
 
 /* Navbar */
@@ -72,13 +74,12 @@ body {
   color: #3182ce;
 }
 
-/* Main Content */
+/* Main content area (Home section) */
 main {
-  flex: 1;
-  padding: 4rem 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 /* Home Section */
@@ -506,5 +507,719 @@ main {
   
   .form-status.error {
     color: #e53e3e;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+  text-decoration: none;
+  color: #333;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #800000;
+}
+
+.blog-card p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.blog-card .date {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Styles for individual blog page */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  color: #666;
+}.blog-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+/* General container for the blog post */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+/* Main blog title */
+.container h2 {
+  font-size: 2.5rem; /* Increased from default */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+/* Published date */
+.date {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 30px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Section headings (h4 in your case) */
+.container h4 {
+  font-size: 1.75rem; /* Increased size */
+  font-weight: 600;
+  color: #2d3748;
+  margin: 40px 0 20px;
+  font-family: 'Georgia', serif;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+/* Paragraphs */
+.container p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 20px 0; /* Increased spacing between paragraphs */
+  line-height: 1.8;
+  font-family: 'Merriweather', serif; /* Better font for readability */
+}
+
+/* Images */
+.blog-image {
+  width: 40%;
+  max-width: 5000px;
+  height: auto;
+  margin: 30px auto; /* Increased spacing between images */
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0; /* Subtle border for images */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Back to Blogs link */
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  .container h4 {
+    font-size: 1.5rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  .blog-image {
+    max-width: 100%;
+  }
+}
+/* Container for the Blogs page and Blog Post page */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Home heading */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px; /* Reduced from 20px to minimize space */
+  font-family: 'Georgia', serif;
+}
+
+/* Blog grid layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Blog card */
+.blog-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  color: inherit; /* Prevent link color from affecting children */
+}
+
+/* Hover effect for blog card */
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Blog card image */
+.blog-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Blog card content */
+.blog-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blog card description */
+.blog-card-description {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+  font-family: 'Merriweather', serif;
+}
+
+/* Blog card excerpt */
+.blog-card-excerpt {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Blog card date */
+.blog-card-date {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* Styles for the Blog Post page */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+/* Main blog title */
+.container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+/* Published date */
+.date {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 30px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Section headings (h4 in your case) */
+.container h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 40px 0 20px;
+  font-family: 'Georgia', serif;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+/* Paragraphs */
+.container p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 20px 0;
+  line-height: 1.8;
+  font-family: 'Merriweather', serif;
+}
+
+/* Images */
+.blog-image {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  margin: 30px auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Back to Blogs link */
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments for Blogs page */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .blog-card-title {
+    font-size: 1.3rem;
+  }
+
+  .blog-card-image {
+    height: 180px;
+  }
+}
+
+/* Responsive adjustments for Blog Post page */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  .container h4 {
+    font-size: 1.5rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  .blog-image {
+    max-width: 100%;
+  }
+}
+/* Projects section */
+.projects {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Section title (My Projects) */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Georgia', serif;
+}
+
+/* Project grid layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Project card */
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for project card */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Project title */
+.project-title {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-family: 'Georgia', serif;
+}
+
+/* Project description */
+.project-description {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  color: #4a5568;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+}
+
+/* Project link */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2d3748;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* GitHub icon */
+.github-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Hover effect for project link */
+.project-link:hover {
+  color: #1a73e8;
+}
+
+/* Responsive adjustments for Projects section */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+}
+/* About section */
+.about {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* About content */
+.about-content {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* Paragraphs in About section */
+.about-content p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 20px 0;
+  line-height: 1.8;
+  font-family: 'Merriweather', serif;
+}
+
+/* Responsive adjustments for About section */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+/* Home section */
+.home {
+  max-width: 800px;
+  margin: 20px auto; /* Reduced from 40px to minimize top/bottom space */
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Home content */
+.home-content {
+  background-color: #f7f9fc;
+  border-radius: 12px;
+  padding: 40px; /* Increased from 30px for more internal spacing */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Slightly softer shadow for depth */
+}
+
+/* Paragraphs in Home section */
+.home-content p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 5px 0; /* Reduced from 10px for tighter spacing */
+  line-height: 1.6;
+  font-family: 'Merriweather', serif;
+}
+/* Footer section */
+.footer {
+  text-align: center;
+  padding: 10px 0; /* Reduced from 20px to minimize space */
+  margin-top: 20px; /* Reduced from 40px to bring footer closer */
+}
+
+/* Social links container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Social media icons */
+.social-icon {
+  font-size: 2rem;
+  color: #2d3748;
+  transition: color 0.3s ease;
+}
+
+/* Default hover effect for LinkedIn and Twitter */
+.social-icon:hover {
+  color: #1a73e8;
+}
+
+/* Custom hover effect for GitHub */
+.github-icon:hover {
+  color: #1a1a1a;
+}
+
+/* Custom hover effect for YouTube */
+.youtube-icon:hover {
+  color: #ff0000;
+}
+
+/* Responsive adjustments for Home section */
+@media (max-width: 768px) {
+  .home {
+    max-width: 100%;
+    margin: 15px auto; /* Further reduced for mobile */
+  }
+
+  .home-content {
+    padding: 10px; /* Further reduced for mobile */
+    max-width: 90%;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+    margin: 4px 0;
+    line-height: 1.5;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+  .social-links {
+    gap: 20px;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    margin-top: 15px; /* Further reduced for mobile */
+    padding: 8px 0;
+  }
+}
+
+/* Blog post section */
+.blog-post {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Blog title */
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+}
+
+/* Blog date */
+.blog-date {
+  font-size: 1rem;
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+}
+
+/* Blog content */
+.blog-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Section headings - Increased specificity and enforced bold */
+section.blog-post .blog-content h2 {
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  color: #2d3748 !important;
+  margin: 30px 0 15px !important;
+  font-family: 'Georgia', serif !important;
+}
+
+/* Paragraphs */
+.blog-content p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 10px 0;
+  line-height: 1.6;
+  font-family: 'Merriweather', serif;
+}
+
+/* Lists */
+.blog-content ul {
+  list-style-type: disc;
+  margin: 10px 0 10px 20px;
+}
+
+.blog-content li {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 5px 0;
+  line-height: 1.6;
+  font-family: 'Merriweather', serif;
+}
+
+/* Strong text */
+.blog-content strong {
+  font-weight: 700;
+}
+
+/* Responsive adjustments for blog post */
+@media (max-width: 768px) {
+  .blog-post {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .blog-content {
+    padding: 15px;
+  }
+
+  section.blog-post .blog-content h2 {
+    font-size: 1.7rem !important;
+    font-weight: 800 !important;
+    margin: 20px 0 10px !important;
+  }
+
+  .blog-content p,
+  .blog-content li {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }

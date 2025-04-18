@@ -1,15 +1,15 @@
 import React from 'react';
+import '../App.css';
 
 function Home() {
   return (
     <section className="home">
-      <h1>Welcome to My Portfolio</h1>
-      <p>
-        I am Aarya Pathak, a Computer Science student at Kathmandu University with a passion for Cognitive Science and technology.
-      </p>
-      <p>
-        Explore my projects, blogs, and more to see how I bridge computing and human cognition to create impactful solutions.
-      </p>
+      <h1 className="section-title">Welcome to My Portfolio</h1>
+      <div className="home-content">
+        <p>I’m Aarya Pathak, a Computer Science student at Kathmandu University with a deep interest in Cognitive Science.</p>
+        <p>Feel free to navigate around the website and don't hesitate to reach out to me for any questions.</p>
+          
+      </div>
     </section>
   );
 }
