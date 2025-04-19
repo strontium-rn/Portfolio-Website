@@ -342,7 +342,7 @@ const blogData = [
       },
       {
         type: 'paragraph',
-        text: 'Now, how does this make me feel like Harvey Specter? My idea of Harvey Specter is to be able to understand how a person’s mind works. When Arogya crossed the score of 500 points in the game, everybody was just surprised, and nobody had an actual clue about how he was able to achieve such a high score. I had read about divided attention, and that immediately sparked my curiosity. I searched for a paper online and came across this paper (paper linked here). I read the paper, and my curiosities took a chain reaction. I started to ask him questions regarding his handedness and playing drums. That answered most of my questions.',
+        text:'Now, how does this make me feel like Harvey Specter? My idea of Harvey Specter is to be able to understand how a person’s mind works. When Arogya crossed the score of 500 points in the game, everybody was just surprised, and nobody had an actual clue about how he was able to achieve such a high score. I had read about divided attention, and that immediately sparked my curiosity. I searched for a paper online and came across <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5546942/" target="_blank" rel="noopener noreferrer">this paper</a>. I read the paper, and my curiosities took a chain reaction. I started to ask him questions regarding his handedness and playing drums. That answered most of my curiosities.'
       },
       {
         type: 'paragraph',
@@ -366,7 +366,7 @@ const BlogPost = () => {
       <div className="date">Published on {blog.date}</div>
       {blog.content.map((item, index) => {
         if (item.type === 'paragraph') {
-          return <p key={index}>{item.text}</p>;
+          return <p key={index} dangerouslySetInnerHTML={{ __html: item.text }} />;
         } else if (item.type === 'image') {
           return <img key={index} src={item.src} alt={item.alt} className="blog-image" />;
         } else if (item.type === 'heading') {
