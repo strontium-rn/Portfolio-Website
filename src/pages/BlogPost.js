@@ -214,7 +214,7 @@ const blogData = [
   {
     id: 2,
     title: 'How becoming a cognitive scientist will make you feel like Harvey Specter',
-    date: 'April 18, 2025',
+    date: 'April 19, 2025',
     content: [
       {
         type: 'heading',

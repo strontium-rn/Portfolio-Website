@@ -1223,3 +1223,155 @@ section.blog-post .blog-content h2 {
     line-height: 1.5;
   }
 }
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Navbar header (name and hamburger) */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #3182ce;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #3182ce;
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2d3748;
+  padding: 0.5rem;
+}
+
+/* Responsive adjustments for Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar h2 {
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-container {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    width: 100%;
+  }
+
+  .nav-container.open {
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background-color: #f9fafb;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a::after {
+    display: none; /* Remove underline hover effect on mobile */
+  }
+
+  .navbar a:hover {
+    background-color: #e2e8f0;
+    color: #2d3748;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-header {
+    width: auto;
+  }
+  
+  .nav-container {
+    height: auto !important;
+    overflow: visible;
+  }
+}
